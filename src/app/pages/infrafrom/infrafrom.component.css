@@ -1,0 +1,172 @@
+.body {
+    background-color: #c8fdc8; /* Set the body background to green */
+    padding: 20px; /* Add some padding around the body */
+}
+
+
+
+.container {
+    max-width:max-content;
+    margin: auto;
+    padding: 20px;
+    background-color: #ebebeb; /* Set form background to white */
+    border-radius: 5px;
+    border-bottom-color: #555;
+    display: flex;
+    flex-direction: column;
+}
+
+.AzureResourceDetail, .ApplicationDetails {
+    text-align: center; /* Center-align the headings */
+    color: green; /* Set heading color to green */
+    margin: 20px 0; /* Add vertical spacing around headings */
+}
+
+.ApplicationDetails {
+    border-bottom: 2px solid black; /* Black underline below the Application Details */
+    padding-bottom: 10px; /* Space between text and underline */
+}
+
+.submitter-email {
+    display: flex;
+    justify-content:center; /* Align the group to the right */
+    margin-bottom: 15px;
+}
+
+.submitter-email-group {
+    text-align:center; /* Align text to the right within the group */
+}
+
+.note {
+    margin-top: 5px; /* Add spacing above the note */
+    color: #ff1111; /* Color for the note text */
+    font-size: 0.9em; /* Slightly smaller font for the note */
+}
+
+.small-input {
+    width: 70%; /* Set the width of the input box */
+    padding: 8px; /* Maintain padding for comfort */
+    border: 1px solid #ccc; /* Consistent border style */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.mandatory-note {
+    margin-top: 1px; /* Margin above the note */
+    color: #555; /* Darker color for note */
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflow if necessary */
+    text-overflow: ellipsis; /* Optional: Show ellipsis if the text overflows */
+}
+.mandatory{
+    color: #ff1818;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px; /* Add padding for better spacing */
+    border: 1px solid #ccc; /* Gray border for color box */
+    border-radius: 4px; /* Rounded corners for the color box */
+    background-color: #f9f9f9; /* Light gray background for input sections */
+}
+
+.form-group:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], select {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px; /* Gap between label and input */
+}
+
+input[type="text"]:focus, select:focus {
+    outline: none;
+    border-color: #4CAF50; /* Highlight border color on focus */
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.nsg-rules {
+    width: 100%;
+    margin-bottom: 20px; /* Ensure there's space below the table */
+    border-collapse: collapse; /* Remove space between cells */
+}
+
+.nsg-rules input[type="text"], .nsg-rules select {
+    width: 100%; /* Make inputs and selects fill the cell */
+    padding: 8px; /* Add some padding for comfort */
+    border: 1px solid #ccc; /* Consistent border style */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding and borders are included in the total width */
+}
+
+.nsg-rules th, .nsg-rules td {
+    padding: 10px; /* Ensure there's space in table cells */
+    text-align: left; /* Align text to the left */
+}
+
+.nsg-rules th {
+    background-color: #f2f2f2;
+}
+
+.add-row {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.add-row button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-row button:hover {
+    background-color: #45a049;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.form-actions button:hover {
+    background-color: #45a049;
+}
+
+.delete-row {
+    color: red;
+    cursor: pointer;
+}
+
+
+::after {
+    content: "";
+    display: table;
+    clear: both;
+}

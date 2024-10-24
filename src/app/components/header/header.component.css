@@ -1,0 +1,39 @@
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    margin: 2px;
+    padding: 4px;
+    box-sizing: border-box;
+    border-style:ridge;
+    border-bottom-color: black;
+}
+
+.navbar-left {
+    flex: 0;
+
+}
+
+.logo {
+    height: 65px; /* Adjust the height of the logo as needed */
+}
+
+.navbar-right {
+    flex: 25;
+    text-align: center;
+    color: green;
+}
+
+.navbar-right h1 {
+    font-size: 1.5rem;
+    color: #5cb315;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    
+}

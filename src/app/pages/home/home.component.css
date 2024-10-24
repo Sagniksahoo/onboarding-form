@@ -1,0 +1,71 @@
+/* Container for centering content */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white; /* White background */
+    position: relative; /* For relative positioning of animated elements */
+    overflow: hidden; /* To keep the animation within bounds */
+  }
+  
+  /* Logo styling */
+  .logo {
+    font-family: 'Arial', sans-serif; /* Closest match for the font style */
+    font-size: 150px; /* Large text to match the image size */
+    font-weight: bold; /* Bold text to match the logo */
+    color: #78be20; /* Bright green color to match the logo */
+    display: flex;
+    transition: all 1s ease-in-out;
+  }
+  
+  .left-part, .right-part {
+    transition: transform 1s ease-in-out; /* Smooth animation for splitting */
+  }
+  
+  .split-logo .left-part {
+    transform: translateX(-290%); /* Move left part left */
+  }
+  
+  .split-logo .right-part {
+    transform: translateX(290%); /* Move right part right */
+  }
+  
+  /* Hidden welcome text initially */
+  .welcome-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 160px;
+    color: #78be20;
+    font-weight: bold; /* Bold text to match the logo */
+    opacity: 0; /* Hidden initially */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+    position: absolute;
+    top: 40%; /* Center vertically */
+    display: flex;    /* Flex to align the two spans horizontally */
+    letter-spacing: -4px; /* Tight letter spacing to match the logo */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+  }
+  
+  /* Show welcome text after the split */
+  .show-welcome {
+    opacity: 1; /* Fade in the welcome text */
+  }
+  
+  /* Button styling */
+  .btn {
+    margin-top: 50px;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #78be20;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #5c9d1d;
+  }
+  

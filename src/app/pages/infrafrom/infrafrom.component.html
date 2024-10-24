@@ -1,0 +1,186 @@
+<app-header></app-header>
+
+<body>
+    <div class="body">
+        <div class="container">
+            <h1 class="AzureResourceDetail">Azure Resource Details</h1>
+            <div class="submitter-email">
+                <div class="submitter-email-group">
+                    <label for="submitterEmail">Submitter Email ID <span class="mandatory">*</span></label>
+                    <input type="text" id="submitterEmail" name="submitterEmail"
+                        placeholder="Example: viren.pawar@asda.uk" class="small-input">
+                    <p class="note">Note: A confirmation mail will be sent to this email id.</p>
+                </div>
+            </div>
+            <p class="mandatory-note">Fields with <span class="mandatory">*</span> mark are mandatory.</p>
+            <h2 class="ApplicationDetails">Application Details</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="towerName">Tower Name <span class="mandatory">*</span></label>
+                        <input type="text" id="towerName" name="towerName" placeholder="Example: George" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicationName">Application Name</label>
+                        <input type="text" id="applicationName" name="applicationName"
+                            placeholder="Example: Range Plan">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="subscriptionName">Subscription Name</label>
+                        <input type="text" id="subscriptionName" name="subscriptionName"
+                            placeholder="Eg: sub-spkmdd-devv-uks-01">
+                    </div>
+                    <div class="form-group">
+                        <label for="environment">Environment <span class="mandatory">*</span></label>
+                        <select id="environment" name="environment">
+                            <option value="">Select a value</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="region">Region <span class="mandatory">*</span></label>
+                        <select id="region" name="region">
+                            <option value="">Select a value</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ownerNameEmail">Owner Name and Email <span class="mandatory">*</span></label>
+                        <input type="text" id="ownerNameEmail" name="ownerNameEmail"
+                            placeholder="Example: Viren Pawar - viren.pawar@asda.uk">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="supportTeamEmail">Support Team E-Mail Address</label>
+                        <input type="text" id="supportTeamEmail" name="supportTeamEmail"
+                            placeholder="Example: ICS Infrastructure - tcsinfrastructure@asda.uk">
+                    </div>
+                    <div class="form-group">
+                        <label for="developmentTeamEmail">Development Team E-Mail Address <span
+                                class="mandatory">*</span></label>
+                        <input type="text" id="developmentTeamEmail" name="developmentTeamEmail"
+                            placeholder="Example: Viren Pawar - viren.pawar@asda.uk">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tdd">Technical Design Document</label>
+                        <input type="text" id="tdd" name="tdd" placeholder="link of TDD">
+                    </div>
+                    <div class="form-group">
+                        <label for="alertActionGroup">Alert Action Group recipients & emails/DL</label>
+                        <input type="text" id="alertActionGroup" name="alertActionGroup"
+                            placeholder="Example: dl@team.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tags">Tags</label>
+                        <input type="text" id="tags" name="tags" placeholder="Example: {ServiceType: Premium}">
+                    </div>
+                    <div class="form-group">
+                        <label for="dev-email">Development Team E-Mail Address</label>
+                        <input type="text" id="dev-email" placeholder="Example: Viren Pawar - viren.pawar@asda.uk">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="support-email">Support Team E-Mail Address</label>
+                        <input type="text" id="support-email"
+                            placeholder="Example: TCS Infrastructure - tcsinfrastructure@asda.uk">
+                    </div>
+                    <div class="form-group">
+                        <label for="tdd-link">Technical Design Document</label>
+                        <input type="text" id="tdd-link" placeholder="link of TDD">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tags">Tags</label>
+                        <input type="text" id="tags" placeholder="Example: {ServiceType : Premium}">
+                    </div>
+                    <div class="form-group">
+                        <label for="alert-email">Alert Action Group recipients E-mails/DL</label>
+                        <input type="text" id="alert-email" placeholder="Example: dl@team.com">
+                    </div>
+                </div>
+                <div class="add-row">
+                    <button type="button" (click)="addRow()">Add new row</button>
+                </div>
+
+
+                <table class="nsg-rules" id="nsg-rules-table" #nsgRulesTable>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Destination</th>
+                            <th>Port</th>
+                            <th>Direction</th>
+                            <th>Type</th>
+                            <th>Priority</th>
+                            <th>Purpose</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" placeholder="SQL(x.x.x.x/y.y)"></td>
+                            <td><input type="text" placeholder="SA(x.x.x.x/y.y)"></td>
+                            <td><input type="text" placeholder="445"></td>
+                            <td><input type="text" placeholder="Inbound"></td>
+                            <td><input type="text" placeholder="TCP"></td>
+                            <td><input type="text" placeholder="121"></td>
+                            <td><input type="text" placeholder="SQL to SA connectivity."></td>
+                            <td>
+                                <button type="button">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <div class="form-actions">
+                    <button type="button">Add New Resource</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<!-- <script>
+    function addRow() {
+        var table = document.getElementById("nsg-rules-table").getElementsByTagName('tbody')[0];
+        var newRow = table.insertRow();
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+        var cell5 = newRow.insertCell(4);
+        var cell6 = newRow.insertCell(5);
+        var cell7 = newRow.insertCell(6);
+        var cell8 = newRow.insertCell(7);
+        cell1.innerHTML = 'SQL(x.x.x.x/y.y)';
+        cell2.innerHTML = 'SA(x.x.x.x/y.y)';
+        cell3.innerHTML = '445';
+        cell4.innerHTML = 'Inbound';
+        cell5.innerHTML = 'TCP';
+        cell6.innerHTML = '121';
+        cell7.innerHTML = 'SQL to SA connectivity.';
+        cell8.innerHTML = '<span class="delete-row" onclick="deleteRow(this)">Delete</span>';
+    }
+
+    function deleteRow(r) {
+        var i = r.parentNode.parentNode.rowIndex;
+        document.getElementById("nsg-rules-table").deleteRow(i);
+    }
+</script> -->
