@@ -1,3 +1,7 @@
+#Configaration
+  1.Node Js->18.0.0
+  2. Angular->16.2.0.
+ 
 # AngularProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
